@@ -9,8 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from keras.datasets import mnist
 from keras.models import Model,Sequential
-from keras.layers import Input,Dense,Conv2D,MaxPooling2D,UpSampling2D,Flatten,Reshape
-from keras import regularizers
+from keras.layers import Conv2D,MaxPooling2D,UpSampling2D
 from keras.models import load_model
 
 # Loading the data
@@ -65,7 +64,7 @@ for i in range(iteration):
     
     
 # Reconstructing and checking
-autoencoder=load_model('model_1.h5')
+autoencoder=load_model('model_99.h5')
 num_images=10
 np.random.seed(42)
 random_test_images=np.random.randint(x_test.shape[0],size=num_images)
